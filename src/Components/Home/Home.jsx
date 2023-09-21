@@ -34,7 +34,15 @@ function Home() {
           </p>
           <div style={{ marginTop: '150px', marginInline: 'auto' }}>
             <Button>Get started</Button>
-            <Button variant="text">Get more info</Button>
+            <Button
+              variant="text"
+              style={{
+                color: 'black',
+                lineHeight: '30.24px',
+                fontWeight: '600',
+              }}>
+              Get more info
+            </Button>
           </div>
         </Grid>
         <Grid item xs={6}>
