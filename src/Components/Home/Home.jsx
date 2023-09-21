@@ -32,7 +32,12 @@ function Home() {
             and mobile solutions that empower businesses to succeed online.
             Let&apos;s bring your vision to life
           </p>
-          <div style={{ marginTop: '150px', marginInline: 'auto' }}>
+          <div
+            style={{
+              marginTop: '30px',
+              textAlign: 'start',
+              width: '73%',
+            }}>
             <Button>Get started</Button>
             <Button
               variant="text"
@@ -40,6 +45,7 @@ function Home() {
                 color: 'black',
                 lineHeight: '30.24px',
                 fontWeight: '600',
+                marginLeft: '10px',
               }}>
               Get more info
             </Button>
@@ -49,6 +55,18 @@ function Home() {
           <img src={homesvg} style={{ margin: '0 auto' }} />
         </Grid>
       </Grid>
+      <Button
+        variant="text"
+        style={{
+          color: 'black',
+          lineHeight: '30.24px',
+          fontWeight: '400',
+          fontSize: '12px',
+          marginLeft: '10px',
+          marginTop: '50px',
+        }}>
+        See more
+      </Button>
     </div>
   );
 }
