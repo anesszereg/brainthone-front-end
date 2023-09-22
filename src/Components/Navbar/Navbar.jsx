@@ -1,4 +1,8 @@
-import './Navbar.css';
+
+import { Box, Typography } from "@mui/material";
+
+import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
@@ -15,11 +19,15 @@ function Navbar() {
 
       <a
         className="nav-logo"
-        style={{ position: 'absolute', top: '20px', left: '130px' }}>
+        style={{ position: "absolute", top: "20px", left: "130px" }}
+      >
         Logo
       </a>
 
-      <button className="primary-button login">Login</button>
+      <Link to="auth">
+        <button className="primary-button login">Login</button>
+      </Link>
+
     </div>
   );
 }

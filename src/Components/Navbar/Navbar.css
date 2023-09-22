@@ -1,51 +1,44 @@
 @import url(https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;600;800;900&display=swap);
 
-
-
-.nav-bar{
-    
-    font-family: 'Outfit', sans-serif;
-    font-size: 28px;
-    font-weight: 500;
-    margin: 25px 0 30px 0;
-    
+.nav-bar {
+  font-family: "Outfit", sans-serif;
+  font-size: 28px;
+  font-weight: 500;
+  margin: 25px 0 30px 0;
 }
 
 .nav-menu {
-    display: flex;
-    gap:32px;
-    margin-inline: auto;
+  display: flex;
+  gap: 32px;
+  margin-inline: auto;
 }
 
-.nav-bar a{
-    all:unset
+.nav-bar a {
+  all: unset;
 }
 
 .nav-bar a:hover {
-    all:unset
+  all: unset;
 }
 .nav-logo {
-    position: absolute;
-    top:20px;
-    right:20px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
 }
 
-
-
-.login{
-    position: absolute;
-    top:20px;
-    right:130px
+.login {
+  position: absolute;
+  top: 20px;
+  right: 130px;
+  cursor: pointer;
 }
 
-
-
-.side-buttons{
-    display: flex;
-    justify-content: space-between;
+.side-buttons {
+  display: flex;
+  justify-content: space-between;
 }
 
-.menu-container{
-    display: flex;
-    justify-self: center;
+.menu-container {
+  display: flex;
+  justify-self: center;
 }
