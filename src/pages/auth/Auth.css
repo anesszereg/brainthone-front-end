@@ -1,0 +1,20 @@
+.auth-icons {
+  display: flex;
+  justify-content: flex-start;
+  gap: 14px;
+  margin-top: 10.404825737265416vh;
+  cursor: pointer;
+}
+
+.auth-icons img {
+  height: 9vh;
+  transition: filter 0.3s ease;
+}
+
+.grey {
+  filter: grayscale(100%);
+}
+
+.active {
+  filter: grayscale(0%);
+}

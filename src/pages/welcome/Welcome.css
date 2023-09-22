@@ -1,0 +1,12 @@
+.welcome-wrapper {
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.welcome-wrapper h1 {
+    font-size: 4.0em;
+    max-width: 800px;
+}
+
