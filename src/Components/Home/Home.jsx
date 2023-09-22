@@ -3,8 +3,10 @@ import { Button, Grid } from "@mui/material";
 
 function Home() {
   return (
+
     <div style={{ width: "100%" }}>
       <Grid style={{ width: "100%" }} container spacing={0}>
+
         <Grid
           item
           xs={6}
@@ -17,6 +19,7 @@ function Home() {
         >
           <h2
             style={{
+
               margin: "0 auto",
               fontSize: "47.11px",
               textAlign: "start",
@@ -31,6 +34,7 @@ function Home() {
           <p
             style={{ textAlign: "start", maxWidth: "73%", fontSize: "16.8px" }}
           >
+
             We&apos;re a team of experienced developers creating innovative web
             and mobile solutions that empower businesses to succeed online.
             Let&apos;s bring your vision to life

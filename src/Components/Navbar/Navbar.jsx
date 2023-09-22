@@ -1,3 +1,4 @@
+
 import { Box, Typography } from "@mui/material";
 
 import "./Navbar.css";
@@ -26,6 +27,7 @@ function Navbar() {
       <Link to="auth">
         <button className="primary-button login">Login</button>
       </Link>
+
     </div>
   );
 }

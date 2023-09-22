@@ -1,0 +1,61 @@
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap:13px;
+}
+
+.contact-input{
+    width:440px;
+    border: 3px solid black;
+    border-radius: 4px;
+    padding: 15px 28px;
+    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+}
+
+.contact-card{
+    border: 3px solid black;
+    border-radius:4px;
+    width: fit-content;
+    padding: 20px 60px 40px 40px;
+    z-index: 2;
+    background-color: white;
+}
+
+.contact-card p{
+    text-align: left;
+}
+
+.contact-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.contact-wrapper h1{
+    margin-bottom: 0;
+}
+
+.contact-wrapper h2{
+    margin:10px 0 50px 0;
+    color: #FFBA07;
+    font-size: 1.5em;
+}
+
+.tfelsghir {
+    position: relative;
+    bottom:490px;
+    right:330px;
+    transform: rotate(-45deg);
+    height: 180px;
+
+}
+
+.contact-submit-error{
+    background-color:#f22;
+    color: white;
+    cursor:no-drop;
+    border-color: #f22;
+    box-shadow: none;
+}
