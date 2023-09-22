@@ -5,13 +5,7 @@
     gap:13px;
 }
 
-.contact-input{
-    width:440px;
-    border: 3px solid black;
-    border-radius: 4px;
-    padding: 15px 28px;
-    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
-}
+
 
 .contact-card{
     border: 3px solid black;
