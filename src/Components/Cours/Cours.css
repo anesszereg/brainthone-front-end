@@ -1,0 +1,24 @@
+.grid-cours{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+   justify-content: center;
+   gap: 10PX;
+}
+.title{
+    width:calc(100% -200px
+    );
+    display: flex;
+    align-items:center;
+  justify-content: space-between;
+    padding-left: 100px;
+  padding-right: 100px;
+}
+.title h3{
+    color: #463DFF;
+    text-align: center;
+    font-family: Outfit;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}

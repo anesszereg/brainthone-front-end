@@ -1,0 +1,46 @@
+.module{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  
+}
+.texts{
+    display: flex;
+    flex-direction: column;
+  gap: 5px;
+    align-items: flex-start;
+}
+.texts p{
+  font-size: 11px;
+  margin: 0%;
+
+}
+.texts h2{
+    margin: 0%; 
+}
+.btn{
+    display: flex;
+    align-items: center;
+    gap: 10PX
+    ;
+}
+.btn .icons svg{
+   height: 20px;
+   width: 20px;
+}
+.btn button{
+    color: #54D62C;
+text-align: center;
+font-family: Outfit;
+font-size: 14px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+border-radius: 400px;
+background: rgba(84, 214, 44, 0.25);
+width: 114px;
+height: 32px;
+flex-shrink: 0;
+border: none;
+}
