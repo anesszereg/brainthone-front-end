@@ -7,6 +7,7 @@ import Welcome from "./pages/welcome/Welcome.jsx";
 
 import StudentLogin from "./pages/auth/StudentLogin";
 
+import StudentDashboard from "./pages/StudentDashboard/StudentDashboard";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
 
         <Route path="/auth" element={<StudentLogin />} />
 
+        <Route path="/studentDashboard" element={<StudentDashboard />} />
       </Routes>
     </>
   );
