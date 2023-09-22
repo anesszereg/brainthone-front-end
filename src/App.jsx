@@ -1,18 +1,15 @@
-
 import { Route, Routes } from "react-router-dom";
 import Main from "./pages/main/Main";
 import "./App.css";
-import Auth from "./pages/auth/Auth";
+import StudentLogin from "./pages/auth/StudentLogin";
 
 function App() {
   return (
     <>
-
       <Routes>
         <Route path="/" element={<Main />} />
-        <Route path="/auth" element={<Auth />} />
+        <Route path="/auth" element={<StudentLogin />} />
       </Routes>
-
     </>
   );
 }
