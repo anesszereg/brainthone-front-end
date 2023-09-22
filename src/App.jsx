@@ -1,14 +1,15 @@
-import './App.css';
-import Advantages from './Components/Advantages/Advantages';
-import Home from './Components/Home/Home';
-import Navbar from './Components/Navbar/Navbar';
+import { Route, Routes } from "react-router-dom";
+import Main from "./pages/main/Main";
+import "./App.css";
+import Auth from "./pages/auth/Auth";
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Home />
-      <Advantages />
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/auth" element={<Auth />} />
+      </Routes>
     </>
   );
 }
