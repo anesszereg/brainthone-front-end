@@ -10,11 +10,11 @@ function Cours() {
        <h3>View all</h3>
        </div>
         <div className="grid-cours">
-            <CoursBox/>
-            <CoursBox/>
-            <CoursBox/>
-            <CoursBox/>
-            <CoursBox/>
+            <CoursBox module="Mathematics" color="#FFBA07"/>
+            <CoursBox module="History " color="#463DFF"/>
+            <CoursBox module="Sience" color="#54D62C"/>
+            <CoursBox module="English" color="#FF0800"/>
+            <CoursBox module="Physics" color="#B312FF"/>
         </div>
        
     </div>

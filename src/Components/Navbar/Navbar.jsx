@@ -3,10 +3,16 @@ import { Box, Typography } from "@mui/material";
 
 import "./Navbar.css";
 import { Link } from "react-router-dom";
-
+import logo from "../../assets/pngs/logo.png";
 function Navbar() {
   return (
     <div className="nav-bar">
+       <a
+        className="nav-logo"
+        
+      >
+      <img src={logo} alt="" />
+      </a>
       <div className="menu-container">
         <div className="nav-menu">
           <a>Home</a>
@@ -17,12 +23,7 @@ function Navbar() {
         </div>
       </div>
 
-      <a
-        className="nav-logo"
-        style={{ position: "absolute", top: "20px", left: "130px" }}
-      >
-        Logo
-      </a>
+     
 
       <Link to="auth">
         <button className="primary-button login">Login</button>

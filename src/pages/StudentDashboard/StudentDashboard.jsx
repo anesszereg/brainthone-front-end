@@ -6,7 +6,7 @@ import Assignments from '../../Components/Assignments/Assignments'
 import "./StudentDashboard.css"
 function StudentDashboard() {
   return (
-    <div>
+    <div className='dash-stud'>
         <DashboardNav/>
         <Cours/>
         <div className="bottom">
