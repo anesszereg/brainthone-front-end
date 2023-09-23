@@ -1,6 +1,3 @@
-
-import { Box, Typography } from "@mui/material";
-
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 import logo from "../../assets/pngs/logo.png";
@@ -28,7 +25,6 @@ function Navbar() {
       <Link to="auth">
         <button className="primary-button login">Login</button>
       </Link>
-
     </div>
   );
 }
