@@ -10,8 +10,10 @@ import StudentLogin from "./pages/auth/StudentLogin";
 import Spline from "./Components/Splin/Spline";
 import DashboardMainPage from "./pages/DashbordStudent/DashbordMainPage/DashbordMainPage";
 
+
 import StudentDashboard from "./pages/StudentDashboard/StudentDashboard";
 import Page404 from "./pages/page404/Page404";
+
 
 function App() {
   return (
@@ -19,6 +21,7 @@ function App() {
       <Routes>
         <Route path="*" element={<Page404 />} />
         <Route path="/" element={<Main />} />
+
 
         <Route path="/auth" element={<Auth />} />
         <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
@@ -30,6 +33,7 @@ function App() {
         <Route path="/auth" element={<StudentLogin />} />
 
         <Route path="/studentDashboard" element={<StudentDashboard />} />
+
 
       </Routes>
     </>

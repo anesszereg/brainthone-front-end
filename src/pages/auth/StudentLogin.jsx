@@ -1,6 +1,12 @@
+import { useState } from "react";
 import { useForm, Controller } from "react-hook-form";
-import * as yup from "yup";
-import { yupResolver } from "@hookform/resolvers/yup";
+import { useDispatch } from "react-redux";
+import {
+  loginStudent,
+  loginTeacher,
+  registerStudent,
+  registerTeacher,
+} from "../../redux/authslice";
 import studentBigImage from "../../assets/Svgs/studentBigImage.svg";
 import teacherBIgImage from "../../assets/Svgs/teacherBIgImage.svg";
 import eyeIcone from "../../assets/Svgs/eyeIcone.svg";
@@ -9,31 +15,21 @@ import studentImage from "../../assets/Svgs/student.svg";
 import teacherImage from "../../assets/Svgs/teacher.svg";
 import "./Auth.css";
 import "./StudentLogin.css";
-import { useState } from "react";
-const schema = yup.object().shape({
-  email: yup
-    .string()
-    .required("Email is required")
-    .email("Invalid email format"),
-  password: yup
-    .string()
-    .required("Password is required")
-    .min(6, "Password must be at least 6 characters"),
-});
+import { useNavigate } from "react-router-dom";
 
 const StudentLogin = () => {
   const {
     handleSubmit,
     control,
     formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  } = useForm();
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const [student, setStudent] = useState(true);
-  //   const [teacher, setTeacher] = useState(false);
+  const [register, setRegister] = useState(false);
+
   const handleStudentClick = () => {
     setStudent(true);
   };
@@ -41,6 +37,34 @@ const StudentLogin = () => {
   const handleTeacherClick = () => {
     setStudent(false);
   };
+
+  const onSubmit = (data) => {
+    const registrationAction = student ? registerStudent : registerTeacher;
+    const loginAction = student ? loginStudent : loginTeacher;
+
+    if (register) {
+      dispatch(registrationAction(data))
+        .then(() => {
+          if (student) {
+            navigate("/grade");
+          }
+        })
+        .catch((error) => {
+          console.error("Registration failed:", error);
+        });
+    } else {
+      dispatch(loginAction(data))
+        .then(() => {
+          if (student) {
+            navigate("/welcome");
+          }
+        })
+        .catch((error) => {
+          console.error("Login failed:", error);
+        });
+    }
+  };
+
   return (
     <>
       <div className="auth-container">
@@ -51,7 +75,6 @@ const StudentLogin = () => {
           />
         </div>
         <div className="auth-content">
-          {/* <AuthShared></AuthShared> */}
           <div className="auth-icons">
             <img
               src={studentImage}
@@ -68,7 +91,35 @@ const StudentLogin = () => {
           </div>
           <form onSubmit={handleSubmit(onSubmit)}>
             <h1>{student ? "Students" : "Teachers"} Platform</h1>
-            <h3>Login to you account to continue</h3>
+            <h3>Login to your account to continue</h3>
+            {register && (
+              <div className="fullname">
+                <Controller
+                  name="firstname"
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <input
+                      className="contact-input auth-input"
+                      {...field}
+                      placeholder="First Name"
+                    />
+                  )}
+                />
+                <Controller
+                  name="lastname"
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <input
+                      className="contact-input auth-input"
+                      {...field}
+                      placeholder="Last Name"
+                    />
+                  )}
+                />
+              </div>
+            )}
             <div>
               <Controller
                 name="email"
@@ -82,7 +133,11 @@ const StudentLogin = () => {
                   />
                 )}
               />
-              <img src={mailIcon} alt="icon" className="mail-icon" />
+              <img
+                src={mailIcon}
+                alt="icon"
+                className={"mail-icon" + (!register ? "-login" : "")}
+              />
               <p>{errors.email?.message}</p>
             </div>
             <div>
@@ -99,16 +154,58 @@ const StudentLogin = () => {
                   />
                 )}
               />
-              <img src={eyeIcone} alt="icon" className="eye-icon" />
+              <img
+                src={eyeIcone}
+                alt="icon"
+                className={"eye-icon" + (!register ? "-login" : "")}
+              />
               <p>{errors.password?.message}</p>
             </div>
-            <p>I forget my password !</p>
 
+            {register && (
+              <div>
+                <Controller
+                  name="confirmpassword"
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <input
+                      type="phone"
+                      className="contact-input auth-input"
+                      {...field}
+                      placeholder="Phone Number"
+                    />
+                  )}
+                />
+
+                <p>{errors.password?.message}</p>
+              </div>
+            )}
+            {!register && <p>I forgot my password !</p>}
             <button type="submit" className="primary-button">
-              Login
+              {register ? "Register" : "Login"}
             </button>
           </form>
-          <p className="last-p">I don’t have an account !</p>
+
+          {!register ? (
+            <p
+              className="last-p"
+              onClick={() => {
+                setRegister(true);
+              }}
+            >
+              I don’t have an account !
+            </p>
+          ) : (
+            <p
+              className="last-p"
+              onClick={() => {
+                setRegister(false);
+              }}
+            >
+              I already have an account
+            </p>
+          )}
         </div>
       </div>
     </>

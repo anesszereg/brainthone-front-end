@@ -66,7 +66,7 @@ form p {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  text-decoration-line: underline;
+  text-decoration-line: underline ;
   margin: 15px 0px;
   cursor: pointer;
 }
@@ -80,12 +80,39 @@ input::placeholder {
 .eye-icon {
   position: absolute;
   height: 25px;
-  right: 290px;
-  bottom: 307px;
+  left: 1400px;
+  top: 520px;
 }
 .mail-icon {
   height: 25px;
   position: absolute;
-  right: 290px;
-  bottom: 377px;
+  left: 1400px;
+  top: 450px;
+}
+
+.eye-icon-login {
+  position: absolute;
+  height: 25px;
+  left: 1400px;
+  top: 449px;
+}
+
+.mail-icon-login {
+  height: 25px;
+  position: absolute;
+  left: 1400px;
+  top: 379px;
+}
+
+.fullname {
+  display: flex;
+
+  width: 98%;
+  justify-content: space-between; 
+  margin-left: 5px;
+  margin-bottom: 18px;
+}
+
+.fullname input {
+  width: 35%;
 }

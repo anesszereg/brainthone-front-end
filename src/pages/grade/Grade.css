@@ -1,84 +1,85 @@
 .grade-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .grade-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.grade-container h1{
-    font-size: 4.0em;
-    font-weight: 600;
-    margin-bottom: 0px;
+.grade-container h1 {
+  font-size: 4em;
+  font-weight: 600;
+  margin-bottom: 0px;
 }
 
 .grade-container > p {
-    color: #727171;
-    font-size: 1.2em;
-    font-weight: 500;
-    margin-bottom: 60px;
+  color: #727171;
+  font-size: 1.2em;
+  font-weight: 500;
+  margin-bottom: 60px;
 }
 
 .grade-card-container {
-    display: flex;
-    flex-direction: row;
-    gap: 2.5vw;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5vw;
 }
 
 .grade-card {
-    height: 30vh;
-    width: 15vw;
-    background-color: #D4F5CA;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 8px solid #000;
-    box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
-    z-index: 2;
+  height: 30vh;
+  width: 15vw;
+  background-color: #d4f5ca;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 8px solid #000;
+  box-shadow: 8px 8px 0px 0px rgba(0, 0, 0, 1);
+  z-index: 2;
+  cursor: pointer;
 }
 
 .grade-card img {
-    height: 16vh;
+  height: 16vh;
 }
 
-.grade-card-full{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-  }
+.grade-card-full {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
 .grade-card-full p {
-    font-weight: 600;
-    font-size:1.6em;
+  font-weight: 600;
+  font-size: 1.6em;
 }
 
 .grade-card-full ul {
-    text-decoration: none;
-    list-style-type: none;
-    width: 95%;
-    padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  width: 95%;
+  padding: 0;
 }
 
 .grade-card-full li {
-    display: block;
-    width: 100%;
-    background-color: white;
-    border: 3px solid #000;
-    box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
-    position: relative;
-    top:-230px;
-    transition: top 0.3s ease-in-out;
-    margin-bottom: 10px;
-    padding: 7px 0px;
-    font-weight: 600;
-    font-size:1.2em
+  display: block;
+  width: 100%;
+  background-color: white;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 1);
+  position: relative;
+  top: -230px;
+  transition: top 0.3s ease-in-out;
+  margin-bottom: 10px;
+  padding: 7px 0px;
+  font-weight: 600;
+  font-size: 1.2em;
 }
-
-.open li{
-    top:0px
+.hidden {
+  display: none;
 }
-
+.open li {
+  top: 0px;
+}
