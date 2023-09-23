@@ -7,18 +7,14 @@ import Welcome from "./pages/welcome/Welcome.jsx";
 
 import StudentLogin from "./pages/auth/StudentLogin";
 
-
 function App() {
   return (
     <>
       <Routes>
         <Route path="/" element={<Main />} />
-
-        <Route path="/grade" element={<Grade />}/>
-        <Route path="/welcome" element={<Welcome/>}/>
-
+        <Route path="/grade" element={<Grade />} />
+        <Route path="/welcome" element={<Welcome />} />
         <Route path="/auth" element={<StudentLogin />} />
-
       </Routes>
     </>
   );

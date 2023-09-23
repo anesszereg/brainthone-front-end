@@ -15,6 +15,7 @@ import studentImage from "../../assets/Svgs/student.svg";
 import teacherImage from "../../assets/Svgs/teacher.svg";
 import "./Auth.css";
 import "./StudentLogin.css";
+import { useNavigate } from "react-router-dom";
 
 const StudentLogin = () => {
   const {
@@ -24,6 +25,7 @@ const StudentLogin = () => {
   } = useForm();
 
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const [student, setStudent] = useState(true);
   const [register, setRegister] = useState(false);
@@ -41,9 +43,25 @@ const StudentLogin = () => {
     const loginAction = student ? loginStudent : loginTeacher;
 
     if (register) {
-      dispatch(registrationAction(data));
+      dispatch(registrationAction(data))
+        .then(() => {
+          if (student) {
+            navigate("/grade");
+          }
+        })
+        .catch((error) => {
+          console.error("Registration failed:", error);
+        });
     } else {
-      dispatch(loginAction(data));
+      dispatch(loginAction(data))
+        .then(() => {
+          if (student) {
+            navigate("/welcome");
+          }
+        })
+        .catch((error) => {
+          console.error("Login failed:", error);
+        });
     }
   };
 
