@@ -5,6 +5,12 @@
   font-size: 28px;
   font-weight: 500;
   margin: 25px 0 30px 0;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 200px);
+  justify-content: space-between;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 .nav-menu {
@@ -21,13 +27,25 @@
   all: unset;
 }
 .nav-logo {
-  position: absolute;
-  top: 20px;
+
   right: 20px;
+  background-color: #ffba07 !important;
+  width: 53px !important;
+  height: 53px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  border: 4.08px solid #000 !important;
+  border-radius: 8.94px !important;
+box-shadow: 1.08434px 1.08434px 0px 0px #000 !important;
+}
+.nav-logo img{
+  width: 30px;
+  height: 40px;
 }
 
 .login {
-  position: absolute;
+
   top: 20px;
   right: 130px;
   cursor: pointer;
