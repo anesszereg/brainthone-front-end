@@ -10,30 +10,41 @@ import teacherImage from "../../assets/Svgs/teacher.svg";
 import "./Auth.css";
 import "./StudentLogin.css";
 import { useState } from "react";
-const schema = yup.object().shape({
-  email: yup
-    .string()
-    .required("Email is required")
-    .email("Invalid email format"),
-  password: yup
-    .string()
-    .required("Password is required")
-    .min(6, "Password must be at least 6 characters"),
-});
+import { useDispatch, useSelector } from "react-redux";
+import { setRegister } from "../../redux/registerSlice.js";
+
+
+// const schema = yup.object().shape({
+//   email: yup
+//     .string()
+//     .required("Email is required")
+//     .email("Invalid email format"),
+//   password: yup
+//     .string()
+//     .required("Password is required")
+//     .min(6, "Password must be at least 6 characters"),
+// });
+
+
 
 const StudentLogin = () => {
+
+  const reginfo = useSelector((state)=>state.register)
+
   const {
     handleSubmit,
     control,
     formState: { errors },
-  } = useForm({
-    resolver: yupResolver(schema),
-  });
+  } = useForm();
+  
+
   const onSubmit = (data) => {
-    console.log(data);
+    
   };
-  const [student, setStudent] = useState(true);
-  //   const [teacher, setTeacher] = useState(false);
+
+  const [student, setStudent] = useState(true)
+  const [register, setRegister] = useState(false)
+  
   const handleStudentClick = () => {
     setStudent(true);
   };
@@ -41,6 +52,9 @@ const StudentLogin = () => {
   const handleTeacherClick = () => {
     setStudent(false);
   };
+
+
+
   return (
     <>
       <div className="auth-container">
@@ -51,7 +65,6 @@ const StudentLogin = () => {
           />
         </div>
         <div className="auth-content">
-          {/* <AuthShared></AuthShared> */}
           <div className="auth-icons">
             <img
               src={studentImage}
@@ -69,6 +82,33 @@ const StudentLogin = () => {
           <form onSubmit={handleSubmit(onSubmit)}>
             <h1>{student ? "Students" : "Teachers"} Platform</h1>
             <h3>Login to you account to continue</h3>
+            {register && <div className="fullname">
+              <Controller
+                name="firstname"
+                control={control}
+                defaultValue=""
+                render={({ field }) => (
+                  <input
+                    className="contact-input auth-input"
+                    {...field}
+                    placeholder="First Name"
+                    
+                  />
+                )}
+              />
+              <Controller
+                name="lastname"
+                control={control}
+                defaultValue=""
+                render={({ field }) => (
+                  <input
+                    className="contact-input auth-input"
+                    {...field}
+                    placeholder="Last Name"
+                  />
+                )}
+              />
+            </div>}
             <div>
               <Controller
                 name="email"
@@ -82,7 +122,7 @@ const StudentLogin = () => {
                   />
                 )}
               />
-              <img src={mailIcon} alt="icon" className="mail-icon" />
+              <img src={mailIcon} alt="icon" className={"mail-icon"+ (!register ? "-login":"") } />
               <p>{errors.email?.message}</p>
             </div>
             <div>
@@ -99,16 +139,37 @@ const StudentLogin = () => {
                   />
                 )}
               />
-              <img src={eyeIcone} alt="icon" className="eye-icon" />
+              <img src={eyeIcone} alt="icon" className={"eye-icon"+ (!register ? "-login":"") }  />
               <p>{errors.password?.message}</p>
             </div>
-            <p>I forget my password !</p>
+            
 
+            {register &&
+              <div>
+              <Controller
+                name="confirmpassword"
+                control={control}
+                defaultValue=""
+                render={({ field }) => (
+                  <input
+                    type="phone"
+                    className="contact-input auth-input"
+                    {...field}
+                    placeholder="Phone Number"
+                  />
+                )}
+              />
+              {/* <img src={eyeIcone} alt="icon" className="eye-icon" /> */}
+              <p>{errors.password?.message}</p>
+            </div>
+            }
+            {!register && <p>I forgot my password !</p>}
             <button type="submit" className="primary-button">
               Login
             </button>
           </form>
-          <p className="last-p">I don’t have an account !</p>
+          
+          {!register ? <p className="last-p" onClick={()=>{setRegister(true)}}>I don’t have an account !</p> : <p className="last-p" onClick={()=>{setRegister(false)}}>I already have an account</p>}
         </div>
       </div>
     </>
