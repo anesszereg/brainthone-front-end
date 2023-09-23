@@ -19,7 +19,6 @@ function App() {
         <Route path="*" element={<Page404 />} />
         <Route path="/" element={<Main />} />
         <Route path="/GamePage" element={<Spline />} />
-        <Route path="/StudentDashboard" element={<DashboardMainPage />} />
 
         <Route path="/grade" element={<Grade />} />
         <Route path="/welcome" element={<Welcome />} />
