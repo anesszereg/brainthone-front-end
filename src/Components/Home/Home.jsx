@@ -1,6 +1,8 @@
 import homesvg from "../../assets/Svgs/home.svg";
-import { Button, Grid } from "@mui/material";
+import iphone from "../../assets/pngs/iphone.png";
 
+import { Button, Grid } from "@mui/material";
+import "./Home.css"
 function Home() {
   return (
 
@@ -17,6 +19,7 @@ function Home() {
             flexDirection: "column",
           }}
         >
+
           <h2
             style={{
 
@@ -26,6 +29,7 @@ function Home() {
               maxWidth: "73%",
             }}
           >
+            
             <span style={{ color: "#007AFF" }}>Play, </span>
             <span style={{ color: "#FFBA07" }}>Learn, </span>
             <span style={{ color: "#FF0000" }}>Thrive! </span> Gamify 🎮 Your
@@ -46,7 +50,7 @@ function Home() {
               width: "73%",
             }}
           >
-            <Button>Get started</Button>
+            <button className="primary-button get-started">Get started</button>
             <Button
               variant="text"
               style={{
@@ -60,23 +64,26 @@ function Home() {
             </Button>
           </div>
         </Grid>
-        <Grid item xs={6}>
-          <img src={homesvg} style={{ margin: "0 auto" }} />
+        <Grid style={{
+          position:"relative",
+          borderRadius:"50%",
+          overflow:"hidden",
+          height:"530px",
+     
+        }
+          
+        } item xs={6}
+        >
+          <img src={homesvg} style={{ margin: "0 auto" }} ></img>
+          <img src={iphone} className="iphone" alt="" />
         </Grid>
       </Grid>
-      <Button
+      <button
         variant="text"
-        style={{
-          color: "black",
-          lineHeight: "30.24px",
-          fontWeight: "400",
-          fontSize: "12px",
-          marginLeft: "10px",
-          marginTop: "50px",
-        }}
+      className="btn-m"
       >
         See more
-      </Button>
+      </button>
     </div>
   );
 }
