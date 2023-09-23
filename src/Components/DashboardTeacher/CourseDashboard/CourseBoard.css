@@ -1,0 +1,95 @@
+.firstLine.coursedashboard {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  position: relative;
+}
+.moduleCourses.coursedashboard {
+  text-align: left;
+  padding-inline: 20px;
+}
+.moduleCourses.coursedashboard.module2nd {
+  width: 65%;
+  height: auto;
+  padding-inline: 20px;
+  font-weight: 500;
+  color: black;
+}
+.moduleCourses.coursedashboard.module2nd h3 {
+  font-size: 16px;
+}
+.moduleCourses.coursedashboard.module2nd p {
+  font-size: 10px;
+  color: gray;
+  margin-top: 5px;
+}
+.courseCard {
+  display: grid;
+  grid-template-columns: 35% 65%;
+  border: 1px solid grey;
+  padding: 15px;
+  padding-block: 25px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  position: relative;
+}
+.courseImg {
+  width: 75px;
+  height: 75px;
+  border-radius: 7px;
+  background-color: grey;
+}
+.courseContent > * {
+  margin: 0;
+}
+.courseContent p {
+  font-size: 10px;
+  font-weight: 400;
+}
+.courseContent h4 {
+  font-weight: 600;
+  color: black;
+}
+.courseContent button {
+  position: absolute;
+  bottom: 12px;
+  right: 15px;
+  width: 115px;
+  height: 25px;
+  background-color: #00c0ff26;
+  color: #463dff;
+  font-size: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.aboutTrackCard {
+  width: 95%;
+  height: 75px;
+  border: 2px solid grey;
+  margin-bottom: 10px;
+  margin-inline: auto;
+  padding-left: 15px;
+  position: relative;
+}
+.aboutTrackCard p {
+  max-width: 90%;
+  margin-top: 0;
+}
+.aboutTrackCard span{
+ 
+    font-size: 15px;
+    color: grey;
+   
+}
+.aboutTrackCard h5{
+    margin-bottom: 3px;
+    margin-top: 10px;
+}
+.card-inline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 15px;
+}

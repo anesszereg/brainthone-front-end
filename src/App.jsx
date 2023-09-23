@@ -1,3 +1,4 @@
+
 import { Route, Routes } from "react-router-dom";
 import Main from "./pages/main/Main";
 import "./App.css";
@@ -18,6 +19,9 @@ function App() {
       <Routes>
         <Route path="*" element={<Page404 />} />
         <Route path="/" element={<Main />} />
+
+        <Route path="/auth" element={<Auth />} />
+        <Route path="/teacher-dashboard" element={<TeacherDashboard />} />
         <Route path="/GamePage" element={<Spline />} />
 
         <Route path="/grade" element={<Grade />} />
@@ -26,6 +30,7 @@ function App() {
         <Route path="/auth" element={<StudentLogin />} />
 
         <Route path="/studentDashboard" element={<StudentDashboard />} />
+
       </Routes>
     </>
   );
