@@ -1,0 +1,11 @@
+.footer {
+  background-color: #ffba07;
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.fotter-part1{
+    width: 300px;
+    margin: 30px;
+}

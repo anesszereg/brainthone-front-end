@@ -1,55 +1,54 @@
-.contact-form{
-    display: flex;
-    flex-direction: column;
-    align-items: baseline;
-    gap:13px;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  gap: 13px;
 }
 
-
-
-.contact-card{
-    border: 3px solid black;
-    border-radius:4px;
-    width: fit-content;
-    padding: 20px 60px 40px 40px;
-    z-index: 2;
-    background-color: white;
+.contact-card {
+  border: 3px solid black;
+  border-radius: 4px;
+  width: fit-content;
+  padding: 20px 60px 40px 40px;
+  z-index: 2;
+  background-color: white;
 }
 
-.contact-card p{
-    text-align: left;
+.contact-card p {
+  text-align: left;
 }
 
 .contact-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0px;
+  margin-top: 40px;
+  height: 110vh;
 }
 
-.contact-wrapper h1{
-    margin-bottom: 0;
+.contact-wrapper h1 {
+  margin-bottom: 0;
 }
 
-.contact-wrapper h2{
-    margin:10px 0 50px 0;
-    color: #FFBA07;
-    font-size: 1.5em;
+.contact-wrapper h2 {
+  margin: 10px 0 50px 0;
+  color: #ffba07;
+  font-size: 1.5em;
 }
 
 .tfelsghir {
-    position: relative;
-    bottom:490px;
-    right:330px;
-    transform: rotate(-45deg);
-    height: 180px;
-
+  position: relative;
+  bottom: 490px;
+  right: 330px;
+  transform: rotate(-45deg);
+  height: 180px;
 }
 
-.contact-submit-error{
-    background-color:#f22;
-    color: white;
-    cursor:no-drop;
-    border-color: #f22;
-    box-shadow: none;
+.contact-submit-error {
+  background-color: #f22;
+  color: white;
+  cursor: no-drop;
+  border-color: #f22;
+  box-shadow: none;
 }

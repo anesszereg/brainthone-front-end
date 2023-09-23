@@ -16,6 +16,7 @@ const Advantages = () => {
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'column',
+        marginTop:"110px"
       }}>
       <h3 style={{ color: 'black', fontSize: '35px', marginBottom: '2px' }}>
         One Platform, Limitless possibilities
