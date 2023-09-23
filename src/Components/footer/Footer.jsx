@@ -12,8 +12,26 @@ const Footer = () => {
           </p>
         </div>
         <div className="fotter-part2">
-          <div>fzafe</div>
-          <div>fezafez</div>
+          <div>
+
+            <h1>Quick Links</h1>
+            <ul>
+              <li>About Us</li>
+              <li>Course</li>
+              <li>Contact Us</li>
+              <li>Location</li>
+
+            </ul>
+
+          </div>
+          <div>
+            <h1>Get in Touch</h1>
+            <ul>
+              <li>Email@example.com</li>
+              <li>www.website.com</li>
+              <li>+000000000</li>
+            </ul>
+          </div>
         </div>
       </div>
     </>
