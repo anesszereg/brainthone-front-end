@@ -15,12 +15,18 @@
     "@hookform/resolvers": "^3.3.1",
     "@mui/icons-material": "^5.14.9",
     "@mui/material": "^5.14.10",
-    "@reduxjs/toolkit": "^1.9.5",
-    "axios": "^1.5.0",
+
+
+    "@mui/x-data-grid": "^6.15.0",
+
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.455",
+
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.46.2",
-    "react-redux": "^8.1.2",
+    "react-icons": "^4.11.0",
+
     "react-router-dom": "^6.16.0",
     "redux": "^4.2.1",
     "yup": "^1.2.0"
